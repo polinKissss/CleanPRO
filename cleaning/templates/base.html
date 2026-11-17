@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CleanPRO — клининг на дому{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+   <header class="site-header">
+    <div class="container">
+        <a href="{% url 'home' %}" class="logo">CleanPRO</a>
+        <nav class="main-nav" aria-label="Основная навигация">
+            <ul>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'services' %}">Услуги</a></li>
+                <li><a href="{% url 'calculator' %}">Калькулятор</a></li>
+                <li><a href="{% url 'contacts' %}">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+   <footer class="site-footer">
+    <div class="container">
+        <p>2026 CleanPRO. Клининг, мытьё окон и химчистка мебели на дому.</p>
+    </div>
+</footer>
+
+</body>
+</html>

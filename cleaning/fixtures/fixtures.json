@@ -1,0 +1,2475 @@
+[
+ {
+  "id": 1,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Смирнов Алексей Петрович",
+   "phone": "+79176000137",
+   "role": "customer"
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Кузнецова Мария Сергеевна",
+   "phone": "+79176000274",
+   "role": "customer"
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Соколов Дмитрий Андреевич",
+   "phone": "+79176000411",
+   "role": "customer"
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Попова Елена Викторовна",
+   "phone": "+79176000548",
+   "role": "customer"
+  }
+ },
+ {
+  "id": 5,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Лебедев Иван Николаевич",
+   "phone": "+79176000685",
+   "role": "customer"
+  }
+ },
+ {
+  "id": 6,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Новикова Ольга Дмитриевна",
+   "phone": "+79176000822",
+   "role": "customer"
+  }
+ },
+ {
+  "id": 7,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Морозов Павел Игоревич",
+   "phone": "+79176000959",
+   "role": "customer"
+  }
+ },
+ {
+  "id": 8,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Волкова Анна Александровна",
+   "phone": "+79176001096",
+   "role": "customer"
+  }
+ },
+ {
+  "id": 9,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Зайцев Сергей Владимирович",
+   "phone": "+79176001233",
+   "role": "customer"
+  }
+ },
+ {
+  "id": 10,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Павлова Наталья Ивановна",
+   "phone": "+79176001370",
+   "role": "customer"
+  }
+ },
+ {
+  "id": 11,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Егоров Роман Олегович",
+   "phone": "+79176001507",
+   "role": "cleaner"
+  }
+ },
+ {
+  "id": 12,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Куликова Ирина Валерьевна",
+   "phone": "+79176001644",
+   "role": "cleaner"
+  }
+ },
+ {
+  "id": 13,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Фёдоров Артём Максимович",
+   "phone": "+79176001781",
+   "role": "cleaner"
+  }
+ },
+ {
+  "id": 14,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Дмитриева Светлана Юрьевна",
+   "phone": "+79176001918",
+   "role": "cleaner"
+  }
+ },
+ {
+  "id": 15,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Осипов Виктор Павлович",
+   "phone": "+79176002055",
+   "role": "cleaner"
+  }
+ },
+ {
+  "id": 16,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Белова Ксения Андреевна",
+   "phone": "+79176002192",
+   "role": "cleaner"
+  }
+ },
+ {
+  "id": 17,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Тарасов Никита Денисович",
+   "phone": "+79176002329",
+   "role": "cleaner"
+  }
+ },
+ {
+  "id": 18,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Орлова Дарья Михайловна",
+   "phone": "+79176002466",
+   "role": "cleaner"
+  }
+ },
+ {
+  "id": 19,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Семёнов Григорий Львович",
+   "phone": "+79176002603",
+   "role": "cleaner"
+  }
+ },
+ {
+  "id": 20,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Никитина Полина Романовна",
+   "phone": "+79176002740",
+   "role": "cleaner"
+  }
+ },
+ {
+  "id": 21,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Ромашов Игорь Валентинович",
+   "phone": "+79176002877",
+   "role": "senior_manager"
+  }
+ },
+ {
+  "id": 22,
+  "model": "cleaning.user",
+  "fields": {
+   "full_name": "Админ Системный",
+   "phone": "+79176003014",
+   "role": "admin"
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 1,
+   "city": "Ульяновск",
+   "street": "Гончарова",
+   "house": "50",
+   "apartment": 150,
+   "comment": "Код домофона 3991"
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 2,
+   "city": "Ульяновск",
+   "street": "Ленина",
+   "house": "28",
+   "apartment": 43,
+   "comment": "Код домофона 4180"
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 3,
+   "city": "Ульяновск",
+   "street": "Карамзина",
+   "house": "22",
+   "apartment": 172,
+   "comment": "Код домофона 2503"
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 4,
+   "city": "Ульяновск",
+   "street": "Гагарина",
+   "house": "20",
+   "apartment": 181,
+   "comment": "Код домофона 5642"
+  }
+ },
+ {
+  "id": 5,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 5,
+   "city": "Ульяновск",
+   "street": "Рябикова",
+   "house": "2",
+   "apartment": 113,
+   "comment": "Код домофона 8663"
+  }
+ },
+ {
+  "id": 6,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 6,
+   "city": "Ульяновск",
+   "street": "Московское шоссе",
+   "house": "82",
+   "apartment": 30,
+   "comment": "Код домофона 1461"
+  }
+ },
+ {
+  "id": 7,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 7,
+   "city": "Ульяновск",
+   "street": "Профсоюзная",
+   "house": "67",
+   "apartment": 44,
+   "comment": "Код домофона 9049"
+  }
+ },
+ {
+  "id": 8,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 8,
+   "city": "Ульяновск",
+   "street": "Хрустальная",
+   "house": "57",
+   "apartment": 175,
+   "comment": "Код домофона 5990"
+  }
+ },
+ {
+  "id": 9,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 9,
+   "city": "Ульяновск",
+   "street": "Мира",
+   "house": "64",
+   "apartment": 22,
+   "comment": "Код домофона 5160"
+  }
+ },
+ {
+  "id": 10,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 10,
+   "city": "Ульяновск",
+   "street": "Азимутская",
+   "house": "79",
+   "apartment": 41,
+   "comment": "Код домофона 6355"
+  }
+ },
+ {
+  "id": 11,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 1,
+   "city": "Ульяновск",
+   "street": "Шолохова",
+   "house": "40",
+   "apartment": 20,
+   "comment": "Код домофона 9881"
+  }
+ },
+ {
+  "id": 12,
+  "model": "cleaning.address",
+  "fields": {
+   "user": 2,
+   "city": "Ульяновск",
+   "street": "Сургутская",
+   "house": "84",
+   "apartment": 94,
+   "comment": "Код домофона 1544"
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.cleaningtype",
+  "fields": {
+   "name": "Поддерживающая",
+   "labor_rate_per_m2": 0.1,
+   "description": "Регулярная уборка квартиры"
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.cleaningtype",
+  "fields": {
+   "name": "Генеральная",
+   "labor_rate_per_m2": 0.18,
+   "description": "Полная уборка с санузлом и кухней"
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.cleaningtype",
+  "fields": {
+   "name": "После ремонта",
+   "labor_rate_per_m2": 0.22,
+   "description": "Удаление стройпыли и остатков"
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.tariff",
+  "fields": {
+   "cleaning_type": 1,
+   "min_area": 1,
+   "max_area": 49,
+   "price_per_m2": 70.0
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.tariff",
+  "fields": {
+   "cleaning_type": 1,
+   "min_area": 50,
+   "max_area": 999,
+   "price_per_m2": 60.0
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.tariff",
+  "fields": {
+   "cleaning_type": 2,
+   "min_area": 1,
+   "max_area": 49,
+   "price_per_m2": 110.0
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.tariff",
+  "fields": {
+   "cleaning_type": 2,
+   "min_area": 50,
+   "max_area": 999,
+   "price_per_m2": 95.0
+  }
+ },
+ {
+  "id": 5,
+  "model": "cleaning.tariff",
+  "fields": {
+   "cleaning_type": 3,
+   "min_area": 1,
+   "max_area": 49,
+   "price_per_m2": 140.0
+  }
+ },
+ {
+  "id": 6,
+  "model": "cleaning.tariff",
+  "fields": {
+   "cleaning_type": 3,
+   "min_area": 50,
+   "max_area": 999,
+   "price_per_m2": 125.0
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.additionaloption",
+  "fields": {
+   "name": "Мытьё окон",
+   "price": 1200.0,
+   "labor_hours": 1.0,
+   "requires_extractor": false
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.additionaloption",
+  "fields": {
+   "name": "Мытьё духовки",
+   "price": 800.0,
+   "labor_hours": 0.8,
+   "requires_extractor": false
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.additionaloption",
+  "fields": {
+   "name": "Химчистка дивана",
+   "price": 2500.0,
+   "labor_hours": 2.5,
+   "requires_extractor": true
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.additionaloption",
+  "fields": {
+   "name": "Химчистка кресла",
+   "price": 1500.0,
+   "labor_hours": 1.5,
+   "requires_extractor": true
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.brigade",
+  "fields": {
+   "name": "Бригада №1",
+   "senior": 11
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.brigade",
+  "fields": {
+   "name": "Бригада №2",
+   "senior": 12
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.brigade",
+  "fields": {
+   "name": "Бригада №3",
+   "senior": 13
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.brigade",
+  "fields": {
+   "name": "Бригада №4",
+   "senior": 14
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 1,
+   "cleaner": 11,
+   "role_in_brigade": "старший"
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 1,
+   "cleaner": 18,
+   "role_in_brigade": "клинер"
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 1,
+   "cleaner": 17,
+   "role_in_brigade": "клинер"
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 2,
+   "cleaner": 12,
+   "role_in_brigade": "старший"
+  }
+ },
+ {
+  "id": 5,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 2,
+   "cleaner": 19,
+   "role_in_brigade": "клинер"
+  }
+ },
+ {
+  "id": 6,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 2,
+   "cleaner": 11,
+   "role_in_brigade": "клинер"
+  }
+ },
+ {
+  "id": 7,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 3,
+   "cleaner": 13,
+   "role_in_brigade": "старший"
+  }
+ },
+ {
+  "id": 8,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 3,
+   "cleaner": 18,
+   "role_in_brigade": "клинер"
+  }
+ },
+ {
+  "id": 9,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 3,
+   "cleaner": 19,
+   "role_in_brigade": "клинер"
+  }
+ },
+ {
+  "id": 10,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 4,
+   "cleaner": 14,
+   "role_in_brigade": "старший"
+  }
+ },
+ {
+  "id": 11,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 4,
+   "cleaner": 16,
+   "role_in_brigade": "клинер"
+  }
+ },
+ {
+  "id": 12,
+  "model": "cleaning.brigademember",
+  "fields": {
+   "brigade": 4,
+   "cleaner": 15,
+   "role_in_brigade": "клинер"
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.equipment",
+  "fields": {
+   "name": "Парогенератор Kärcher SG 4/4",
+   "etype": "парогенератор",
+   "status": "свободно"
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.equipment",
+  "fields": {
+   "name": "Парогенератор Kärcher SG 4/4 №2",
+   "etype": "парогенератор",
+   "status": "свободно"
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.equipment",
+  "fields": {
+   "name": "Экстрактор Kärcher Puzzi 10/1",
+   "etype": "экстрактор",
+   "status": "в резерве"
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.equipment",
+  "fields": {
+   "name": "Экстрактор Kärcher Puzzi 10/1 №2",
+   "etype": "экстрактор",
+   "status": "в резерве"
+  }
+ },
+ {
+  "id": 5,
+  "model": "cleaning.equipment",
+  "fields": {
+   "name": "Экстрактор Kärcher Puzzi 10/1 №3",
+   "etype": "экстрактор",
+   "status": "в резерве"
+  }
+ },
+ {
+  "id": 6,
+  "model": "cleaning.equipment",
+  "fields": {
+   "name": "Профессиональный пылесос Nilco",
+   "etype": "пылесос",
+   "status": "свободно"
+  }
+ },
+ {
+  "id": 7,
+  "model": "cleaning.equipment",
+  "fields": {
+   "name": "Профессиональный пылесос Nilco №2",
+   "etype": "пылесос",
+   "status": "свободно"
+  }
+ },
+ {
+  "id": 8,
+  "model": "cleaning.equipment",
+  "fields": {
+   "name": "Набор инвентаря бригады №1",
+   "etype": "инвентарь",
+   "status": "закреплён"
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 11,
+   "date": "2026-11-01",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 11,
+   "date": "2026-11-02",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 11,
+   "date": "2026-11-03",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 11,
+   "date": "2026-11-04",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 5,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 11,
+   "date": "2026-11-05",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 6,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 11,
+   "date": "2026-11-06",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 7,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 12,
+   "date": "2026-11-01",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 8,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 12,
+   "date": "2026-11-02",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 9,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 12,
+   "date": "2026-11-03",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 10,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 12,
+   "date": "2026-11-04",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 11,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 12,
+   "date": "2026-11-05",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 12,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 12,
+   "date": "2026-11-06",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 13,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 13,
+   "date": "2026-11-01",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 14,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 13,
+   "date": "2026-11-02",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 15,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 13,
+   "date": "2026-11-03",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 16,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 13,
+   "date": "2026-11-04",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 17,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 13,
+   "date": "2026-11-05",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 18,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 13,
+   "date": "2026-11-06",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 19,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 14,
+   "date": "2026-11-01",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 20,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 14,
+   "date": "2026-11-02",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 21,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 14,
+   "date": "2026-11-03",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 22,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 14,
+   "date": "2026-11-04",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 23,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 14,
+   "date": "2026-11-05",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 24,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 14,
+   "date": "2026-11-06",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 25,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 15,
+   "date": "2026-11-01",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 26,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 15,
+   "date": "2026-11-02",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 27,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 15,
+   "date": "2026-11-03",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 28,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 15,
+   "date": "2026-11-04",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 29,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 15,
+   "date": "2026-11-05",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 30,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 15,
+   "date": "2026-11-06",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 31,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 16,
+   "date": "2026-11-01",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 32,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 16,
+   "date": "2026-11-02",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 33,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 16,
+   "date": "2026-11-03",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 34,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 16,
+   "date": "2026-11-04",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 35,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 16,
+   "date": "2026-11-05",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 36,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 16,
+   "date": "2026-11-06",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 37,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 17,
+   "date": "2026-11-01",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 38,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 17,
+   "date": "2026-11-02",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 39,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 17,
+   "date": "2026-11-03",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 40,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 17,
+   "date": "2026-11-04",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 41,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 17,
+   "date": "2026-11-05",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 42,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 17,
+   "date": "2026-11-06",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 43,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 18,
+   "date": "2026-11-01",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 44,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 18,
+   "date": "2026-11-02",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 45,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 18,
+   "date": "2026-11-03",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 46,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 18,
+   "date": "2026-11-04",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 47,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 18,
+   "date": "2026-11-05",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 48,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 18,
+   "date": "2026-11-06",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 49,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 19,
+   "date": "2026-11-01",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 50,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 19,
+   "date": "2026-11-02",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 51,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 19,
+   "date": "2026-11-03",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 52,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 19,
+   "date": "2026-11-04",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 53,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 19,
+   "date": "2026-11-05",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 54,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 19,
+   "date": "2026-11-06",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 55,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 20,
+   "date": "2026-11-01",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 56,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 20,
+   "date": "2026-11-02",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 57,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 20,
+   "date": "2026-11-03",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 58,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 20,
+   "date": "2026-11-04",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 59,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 20,
+   "date": "2026-11-05",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 60,
+  "model": "cleaning.workschedule",
+  "fields": {
+   "cleaner": 20,
+   "date": "2026-11-06",
+   "shift_start": "08:00",
+   "shift_end": "17:00"
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1001",
+   "customer": 1,
+   "address": 1,
+   "cleaning_type": 1,
+   "tariff": 2,
+   "area": 75,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-02",
+   "time": "09:00",
+   "status": "подтверждён",
+   "labor_hours": 8.5,
+   "cleaners_count": 2,
+   "total_price": 5700.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1002",
+   "customer": 2,
+   "address": 2,
+   "cleaning_type": 2,
+   "tariff": 4,
+   "area": 85,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-03",
+   "time": "10:00",
+   "status": "отменён",
+   "labor_hours": 17.8,
+   "cleaners_count": 3,
+   "total_price": 10575.0,
+   "brigade": 1
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1003",
+   "customer": 3,
+   "address": 3,
+   "cleaning_type": 3,
+   "tariff": 6,
+   "area": 56,
+   "rooms": 2,
+   "bathrooms": 1,
+   "date": "2026-11-04",
+   "time": "11:00",
+   "status": "подтверждён",
+   "labor_hours": 15.32,
+   "cleaners_count": 3,
+   "total_price": 10000.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1004",
+   "customer": 4,
+   "address": 4,
+   "cleaning_type": 2,
+   "tariff": 4,
+   "area": 62,
+   "rooms": 2,
+   "bathrooms": 2,
+   "date": "2026-11-05",
+   "time": "12:00",
+   "status": "новый",
+   "labor_hours": 11.96,
+   "cleaners_count": 2,
+   "total_price": 6690.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 5,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1005",
+   "customer": 5,
+   "address": 5,
+   "cleaning_type": 2,
+   "tariff": 4,
+   "area": 50,
+   "rooms": 2,
+   "bathrooms": 1,
+   "date": "2026-11-06",
+   "time": "13:00",
+   "status": "подтверждён",
+   "labor_hours": 12.8,
+   "cleaners_count": 3,
+   "total_price": 8550.0,
+   "brigade": 4
+  }
+ },
+ {
+  "id": 6,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1006",
+   "customer": 6,
+   "address": 6,
+   "cleaning_type": 2,
+   "tariff": 4,
+   "area": 83,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-07",
+   "time": "14:00",
+   "status": "подтверждён",
+   "labor_hours": 16.44,
+   "cleaners_count": 3,
+   "total_price": 9385.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 7,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1007",
+   "customer": 7,
+   "address": 7,
+   "cleaning_type": 2,
+   "tariff": 3,
+   "area": 32,
+   "rooms": 1,
+   "bathrooms": 1,
+   "date": "2026-11-08",
+   "time": "15:00",
+   "status": "подтверждён",
+   "labor_hours": 5.76,
+   "cleaners_count": 1,
+   "total_price": 3520.0,
+   "brigade": 4
+  }
+ },
+ {
+  "id": 8,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1008",
+   "customer": 8,
+   "address": 8,
+   "cleaning_type": 1,
+   "tariff": 1,
+   "area": 39,
+   "rooms": 1,
+   "bathrooms": 1,
+   "date": "2026-11-09",
+   "time": "16:00",
+   "status": "подтверждён",
+   "labor_hours": 3.9,
+   "cleaners_count": 1,
+   "total_price": 2730.0,
+   "brigade": 4
+  }
+ },
+ {
+  "id": 9,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1009",
+   "customer": 9,
+   "address": 9,
+   "cleaning_type": 3,
+   "tariff": 6,
+   "area": 56,
+   "rooms": 2,
+   "bathrooms": 1,
+   "date": "2026-11-10",
+   "time": "08:00",
+   "status": "подтверждён",
+   "labor_hours": 16.12,
+   "cleaners_count": 3,
+   "total_price": 10800.0,
+   "brigade": 3
+  }
+ },
+ {
+  "id": 10,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1010",
+   "customer": 10,
+   "address": 10,
+   "cleaning_type": 1,
+   "tariff": 2,
+   "area": 78,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-11",
+   "time": "09:00",
+   "status": "отменён",
+   "labor_hours": 7.8,
+   "cleaners_count": 2,
+   "total_price": 4680.0,
+   "brigade": 1
+  }
+ },
+ {
+  "id": 11,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1011",
+   "customer": 1,
+   "address": 11,
+   "cleaning_type": 3,
+   "tariff": 6,
+   "area": 66,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-12",
+   "time": "10:00",
+   "status": "подтверждён",
+   "labor_hours": 19.82,
+   "cleaners_count": 4,
+   "total_price": 13550.0,
+   "brigade": 4
+  }
+ },
+ {
+  "id": 12,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1012",
+   "customer": 2,
+   "address": 12,
+   "cleaning_type": 3,
+   "tariff": 6,
+   "area": 73,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-13",
+   "time": "11:00",
+   "status": "подтверждён",
+   "labor_hours": 19.06,
+   "cleaners_count": 4,
+   "total_price": 12725.0,
+   "brigade": 1
+  }
+ },
+ {
+  "id": 13,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1013",
+   "customer": 3,
+   "address": 1,
+   "cleaning_type": 2,
+   "tariff": 4,
+   "area": 59,
+   "rooms": 2,
+   "bathrooms": 1,
+   "date": "2026-11-14",
+   "time": "12:00",
+   "status": "отменён",
+   "labor_hours": 10.62,
+   "cleaners_count": 2,
+   "total_price": 5605.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 14,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1014",
+   "customer": 4,
+   "address": 2,
+   "cleaning_type": 2,
+   "tariff": 3,
+   "area": 38,
+   "rooms": 1,
+   "bathrooms": 1,
+   "date": "2026-11-15",
+   "time": "13:00",
+   "status": "новый",
+   "labor_hours": 7.84,
+   "cleaners_count": 2,
+   "total_price": 5380.0,
+   "brigade": 1
+  }
+ },
+ {
+  "id": 15,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1015",
+   "customer": 5,
+   "address": 3,
+   "cleaning_type": 3,
+   "tariff": 6,
+   "area": 69,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-16",
+   "time": "14:00",
+   "status": "новый",
+   "labor_hours": 18.48,
+   "cleaners_count": 4,
+   "total_price": 11925.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 16,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1016",
+   "customer": 6,
+   "address": 4,
+   "cleaning_type": 1,
+   "tariff": 2,
+   "area": 53,
+   "rooms": 2,
+   "bathrooms": 1,
+   "date": "2026-11-17",
+   "time": "15:00",
+   "status": "завершён",
+   "labor_hours": 12.3,
+   "cleaners_count": 3,
+   "total_price": 10180.0,
+   "brigade": 3
+  }
+ },
+ {
+  "id": 17,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1017",
+   "customer": 7,
+   "address": 5,
+   "cleaning_type": 3,
+   "tariff": 6,
+   "area": 66,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-18",
+   "time": "16:00",
+   "status": "отменён",
+   "labor_hours": 19.82,
+   "cleaners_count": 4,
+   "total_price": 13550.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 18,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1018",
+   "customer": 8,
+   "address": 6,
+   "cleaning_type": 2,
+   "tariff": 3,
+   "area": 35,
+   "rooms": 1,
+   "bathrooms": 1,
+   "date": "2026-11-19",
+   "time": "08:00",
+   "status": "в работе",
+   "labor_hours": 7.1,
+   "cleaners_count": 2,
+   "total_price": 4650.0,
+   "brigade": 3
+  }
+ },
+ {
+  "id": 19,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1019",
+   "customer": 9,
+   "address": 7,
+   "cleaning_type": 2,
+   "tariff": 4,
+   "area": 85,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-20",
+   "time": "09:00",
+   "status": "подтверждён",
+   "labor_hours": 17.3,
+   "cleaners_count": 3,
+   "total_price": 10475.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 20,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1020",
+   "customer": 10,
+   "address": 8,
+   "cleaning_type": 2,
+   "tariff": 4,
+   "area": 59,
+   "rooms": 2,
+   "bathrooms": 1,
+   "date": "2026-11-21",
+   "time": "10:00",
+   "status": "подтверждён",
+   "labor_hours": 10.62,
+   "cleaners_count": 2,
+   "total_price": 5605.0,
+   "brigade": 4
+  }
+ },
+ {
+  "id": 21,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1021",
+   "customer": 1,
+   "address": 9,
+   "cleaning_type": 3,
+   "tariff": 5,
+   "area": 46,
+   "rooms": 2,
+   "bathrooms": 1,
+   "date": "2026-11-22",
+   "time": "11:00",
+   "status": "завершён",
+   "labor_hours": 12.92,
+   "cleaners_count": 3,
+   "total_price": 9640.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 22,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1022",
+   "customer": 2,
+   "address": 10,
+   "cleaning_type": 1,
+   "tariff": 2,
+   "area": 64,
+   "rooms": 2,
+   "bathrooms": 2,
+   "date": "2026-11-23",
+   "time": "12:00",
+   "status": "отменён",
+   "labor_hours": 7.2,
+   "cleaners_count": 2,
+   "total_price": 4640.0,
+   "brigade": 3
+  }
+ },
+ {
+  "id": 23,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1023",
+   "customer": 3,
+   "address": 11,
+   "cleaning_type": 1,
+   "tariff": 2,
+   "area": 72,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-24",
+   "time": "13:00",
+   "status": "завершён",
+   "labor_hours": 9.5,
+   "cleaners_count": 2,
+   "total_price": 6620.0,
+   "brigade": 3
+  }
+ },
+ {
+  "id": 24,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1024",
+   "customer": 4,
+   "address": 12,
+   "cleaning_type": 1,
+   "tariff": 2,
+   "area": 81,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-25",
+   "time": "14:00",
+   "status": "новый",
+   "labor_hours": 12.1,
+   "cleaners_count": 3,
+   "total_price": 9660.0,
+   "brigade": 4
+  }
+ },
+ {
+  "id": 25,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1025",
+   "customer": 5,
+   "address": 1,
+   "cleaning_type": 2,
+   "tariff": 4,
+   "area": 52,
+   "rooms": 2,
+   "bathrooms": 1,
+   "date": "2026-11-26",
+   "time": "15:00",
+   "status": "новый",
+   "labor_hours": 17.86,
+   "cleaners_count": 3,
+   "total_price": 14240.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 26,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1026",
+   "customer": 6,
+   "address": 2,
+   "cleaning_type": 3,
+   "tariff": 5,
+   "area": 26,
+   "rooms": 1,
+   "bathrooms": 1,
+   "date": "2026-11-27",
+   "time": "16:00",
+   "status": "отменён",
+   "labor_hours": 8.22,
+   "cleaners_count": 2,
+   "total_price": 6140.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 27,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1027",
+   "customer": 7,
+   "address": 3,
+   "cleaning_type": 2,
+   "tariff": 3,
+   "area": 39,
+   "rooms": 1,
+   "bathrooms": 1,
+   "date": "2026-11-28",
+   "time": "08:00",
+   "status": "отменён",
+   "labor_hours": 9.52,
+   "cleaners_count": 2,
+   "total_price": 6790.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 28,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1028",
+   "customer": 8,
+   "address": 4,
+   "cleaning_type": 3,
+   "tariff": 5,
+   "area": 41,
+   "rooms": 1,
+   "bathrooms": 1,
+   "date": "2026-11-01",
+   "time": "09:00",
+   "status": "отменён",
+   "labor_hours": 13.02,
+   "cleaners_count": 3,
+   "total_price": 9740.0,
+   "brigade": 3
+  }
+ },
+ {
+  "id": 29,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1029",
+   "customer": 9,
+   "address": 5,
+   "cleaning_type": 1,
+   "tariff": 2,
+   "area": 71,
+   "rooms": 3,
+   "bathrooms": 2,
+   "date": "2026-11-02",
+   "time": "10:00",
+   "status": "подтверждён",
+   "labor_hours": 12.1,
+   "cleaners_count": 3,
+   "total_price": 9660.0,
+   "brigade": 1
+  }
+ },
+ {
+  "id": 30,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1030",
+   "customer": 10,
+   "address": 6,
+   "cleaning_type": 1,
+   "tariff": 2,
+   "area": 100,
+   "rooms": 4,
+   "bathrooms": 2,
+   "date": "2026-11-03",
+   "time": "11:00",
+   "status": "подтверждён",
+   "labor_hours": 13.3,
+   "cleaners_count": 3,
+   "total_price": 9300.0,
+   "brigade": 1
+  }
+ },
+ {
+  "id": 31,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1031",
+   "customer": 1,
+   "address": 7,
+   "cleaning_type": 3,
+   "tariff": 6,
+   "area": 65,
+   "rooms": 2,
+   "bathrooms": 2,
+   "date": "2026-11-04",
+   "time": "12:00",
+   "status": "завершён",
+   "labor_hours": 14.3,
+   "cleaners_count": 3,
+   "total_price": 8125.0,
+   "brigade": 2
+  }
+ },
+ {
+  "id": 32,
+  "model": "cleaning.order",
+  "fields": {
+   "number": "Z-1032",
+   "customer": 2,
+   "address": 8,
+   "cleaning_type": 3,
+   "tariff": 5,
+   "area": 37,
+   "rooms": 1,
+   "bathrooms": 1,
+   "date": "2026-11-05",
+   "time": "13:00",
+   "status": "подтверждён",
+   "labor_hours": 12.64,
+   "cleaners_count": 3,
+   "total_price": 9680.0,
+   "brigade": 3
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 1,
+   "option": 1,
+   "quantity": 1,
+   "price_at_order": 1200.0
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 2,
+   "option": 3,
+   "quantity": 1,
+   "price_at_order": 2500.0
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 3,
+   "option": 4,
+   "quantity": 2,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 4,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 5,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 5,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 6,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 5,
+   "option": 4,
+   "quantity": 2,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 7,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 6,
+   "option": 4,
+   "quantity": 1,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 8,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 9,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 9,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 9,
+   "option": 4,
+   "quantity": 2,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 10,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 11,
+   "option": 4,
+   "quantity": 3,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 11,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 11,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 12,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 12,
+   "option": 1,
+   "quantity": 3,
+   "price_at_order": 1200.0
+  }
+ },
+ {
+  "id": 13,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 14,
+   "option": 1,
+   "quantity": 1,
+   "price_at_order": 1200.0
+  }
+ },
+ {
+  "id": 14,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 15,
+   "option": 3,
+   "quantity": 1,
+   "price_at_order": 2500.0
+  }
+ },
+ {
+  "id": 15,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 15,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 16,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 16,
+   "option": 4,
+   "quantity": 3,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 17,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 16,
+   "option": 3,
+   "quantity": 1,
+   "price_at_order": 2500.0
+  }
+ },
+ {
+  "id": 18,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 17,
+   "option": 4,
+   "quantity": 3,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 19,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 17,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 20,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 18,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 21,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 19,
+   "option": 1,
+   "quantity": 2,
+   "price_at_order": 1200.0
+  }
+ },
+ {
+  "id": 22,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 21,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 23,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 21,
+   "option": 1,
+   "quantity": 2,
+   "price_at_order": 1200.0
+  }
+ },
+ {
+  "id": 24,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 22,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 25,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 23,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 26,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 23,
+   "option": 4,
+   "quantity": 1,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 27,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 24,
+   "option": 1,
+   "quantity": 4,
+   "price_at_order": 1200.0
+  }
+ },
+ {
+  "id": 28,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 25,
+   "option": 4,
+   "quantity": 3,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 29,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 25,
+   "option": 1,
+   "quantity": 4,
+   "price_at_order": 1200.0
+  }
+ },
+ {
+  "id": 30,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 26,
+   "option": 3,
+   "quantity": 1,
+   "price_at_order": 2500.0
+  }
+ },
+ {
+  "id": 31,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 27,
+   "option": 3,
+   "quantity": 1,
+   "price_at_order": 2500.0
+  }
+ },
+ {
+  "id": 32,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 28,
+   "option": 3,
+   "quantity": 1,
+   "price_at_order": 2500.0
+  }
+ },
+ {
+  "id": 33,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 28,
+   "option": 4,
+   "quantity": 1,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 34,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 29,
+   "option": 1,
+   "quantity": 2,
+   "price_at_order": 1200.0
+  }
+ },
+ {
+  "id": 35,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 29,
+   "option": 4,
+   "quantity": 2,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 36,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 30,
+   "option": 2,
+   "quantity": 1,
+   "price_at_order": 800.0
+  }
+ },
+ {
+  "id": 37,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 30,
+   "option": 3,
+   "quantity": 1,
+   "price_at_order": 2500.0
+  }
+ },
+ {
+  "id": 38,
+  "model": "cleaning.orderoption",
+  "fields": {
+   "order": 32,
+   "option": 4,
+   "quantity": 3,
+   "price_at_order": 1500.0
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.equipmentreservation",
+  "fields": {
+   "order": 3,
+   "equipment": 3,
+   "start_time": "11:00",
+   "end_time": "17:00"
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.equipmentreservation",
+  "fields": {
+   "order": 5,
+   "equipment": 4,
+   "start_time": "13:00",
+   "end_time": "18:00"
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.equipmentreservation",
+  "fields": {
+   "order": 6,
+   "equipment": 5,
+   "start_time": "14:00",
+   "end_time": "20:00"
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.equipmentreservation",
+  "fields": {
+   "order": 9,
+   "equipment": 3,
+   "start_time": "08:00",
+   "end_time": "14:00"
+  }
+ },
+ {
+  "id": 5,
+  "model": "cleaning.equipmentreservation",
+  "fields": {
+   "order": 11,
+   "equipment": 4,
+   "start_time": "10:00",
+   "end_time": "15:00"
+  }
+ },
+ {
+  "id": 6,
+  "model": "cleaning.equipmentreservation",
+  "fields": {
+   "order": 15,
+   "equipment": 5,
+   "start_time": "14:00",
+   "end_time": "19:00"
+  }
+ },
+ {
+  "id": 7,
+  "model": "cleaning.equipmentreservation",
+  "fields": {
+   "order": 25,
+   "equipment": 3,
+   "start_time": "15:00",
+   "end_time": "20:00"
+  }
+ },
+ {
+  "id": 8,
+  "model": "cleaning.equipmentreservation",
+  "fields": {
+   "order": 29,
+   "equipment": 4,
+   "start_time": "10:00",
+   "end_time": "15:00"
+  }
+ },
+ {
+  "id": 9,
+  "model": "cleaning.equipmentreservation",
+  "fields": {
+   "order": 30,
+   "equipment": 5,
+   "start_time": "11:00",
+   "end_time": "16:00"
+  }
+ },
+ {
+  "id": 10,
+  "model": "cleaning.equipmentreservation",
+  "fields": {
+   "order": 32,
+   "equipment": 3,
+   "start_time": "13:00",
+   "end_time": "18:00"
+  }
+ },
+ {
+  "id": 1,
+  "model": "cleaning.review",
+  "fields": {
+   "order": 16,
+   "rating": 4,
+   "comment": "Рекомендую!",
+   "created_at": "2026-11-12 18:00:00"
+  }
+ },
+ {
+  "id": 2,
+  "model": "cleaning.review",
+  "fields": {
+   "order": 21,
+   "rating": 4,
+   "comment": "Быстро и аккуратно.",
+   "created_at": "2026-11-12 18:00:00"
+  }
+ },
+ {
+  "id": 3,
+  "model": "cleaning.review",
+  "fields": {
+   "order": 23,
+   "rating": 4,
+   "comment": "Отличная работа.",
+   "created_at": "2026-11-12 18:00:00"
+  }
+ },
+ {
+  "id": 4,
+  "model": "cleaning.review",
+  "fields": {
+   "order": 31,
+   "rating": 4,
+   "comment": "Всё чисто, спасибо!",
+   "created_at": "2026-11-12 18:00:00"
+  }
+ }
+]
