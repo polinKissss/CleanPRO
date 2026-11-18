@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}О компании — CleanPRO{% endblock %}
+
+{% block content %}
+<section class="page-head">
+    <div class="container">
+        <h1>О компании CleanPRO</h1>
+        <p class="section-subtitle">Клининговая компания в Ульяновске.</p>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container about-columns">
+        <div>
+            <h2>Как мы работаем</h2>
+            <p>Приезжаем со своим инвентарём и средствами. Работаем по договору,
+            оплата после приёмки. В бригаде от одного до четырёх клинеров — состав
+            подбирается под площадь и трудоёмкость.</p>
+            <p>Для сложных покрытий используем моющие экстракторы и парогенераторы.</p>
+        </div>
+        <div>
+            <h2>Почему нам доверяют</h2>
+            <ul class="check-list">
+                <li>Выезд по Ульяновску за 60 минут</li>
+                <li>Оплата после приёмки</li>
+                <li>Честная цена в калькуляторе</li>
+                <li>Оборудование в резерве под ваш заказ</li>
+            </ul>
+            <a href="{% url 'calculator' %}" class="btn btn-primary">Рассчитать стоимость</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

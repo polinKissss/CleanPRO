@@ -1,59 +1,48 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}CleanPRO — клининг на дому в Ульяновске{% endblock %}
-{% load static %}
-{% block content %}
 
+{% block content %}
 <section class="hero">
     <div class="container hero-inner">
         <div class="hero-text">
             <p class="hero-badge">Выезд по Ульяновску за 60 минут</p>
             <h1>Профессиональная уборка квартир и коттеджей</h1>
-            <p class="hero-subtitle">Клининг, мытьё окон и химчистка мягкой мебели.
-               Рассчитайте стоимость за минуту — бригада приедет на следующий день.</p>
+            <p class="hero-subtitle">Бригада из 1–4 клинеров со своим инвентарём. Расчёт стоимости — за минуту в калькуляторе.</p>
             <div class="hero-actions">
                 <a href="{% url 'calculator' %}" class="btn btn-primary">Рассчитать стоимость</a>
                 <a href="{% url 'services' %}" class="btn btn-outline">Все услуги</a>
             </div>
             <dl class="hero-stats">
-                <div><dt>1 500+</dt><dd>выполненных уборок</dd></div>
-                <div><dt>4,9</dt><dd>средняя оценка клиентов</dd></div>
-                <div><dt>6 часов</dt><dd>максимум на уборку</dd></div>
+                <div><dt>60 мин</dt><dd>средний выезд</dd></div>
+                <div><dt>1–4</dt><dd>клинера в бригаде</dd></div>
+                <div><dt>6</dt><dd>видов уборки</dd></div>
             </dl>
         </div>
-        <div class="hero-visual" role="img" aria-label="Бригада клинеров с профессиональным оборудованием">
-            <span class="hero-emoji"></span>
+        <div class="hero-visual">
+            
+                <img src="{% static 'img/2.jpg' %}" alt="Уборка квартиры" width="600" height="450"> 
         </div>
     </div>
 </section>
 
 <section class="services">
     <div class="container">
-        <h2>Виды уборки</h2>
-        <p class="section-subtitle">Выберите тип уборки — в калькуляторе подскажем,
-           сколько специалистов понадобится и сколько это займёт.</p>
+        <h2>Популярные виды уборки</h2>
+        <p class="section-subtitle">Данные берутся из каталога — актуальные виды и нормативы.</p>
         <div class="services-grid">
-            <article class="service-card">
-                <div class="service-icon service-icon--maintenance"></div>
-                <h3>Поддерживающая</h3>
-                <p>Регулярная уборка: пыль, полы, санузел, кухня.
-                   Для чистоты каждый день.</p>
-                <p class="service-price">от 90 ₽/м²</p>
-            </article>
-            <article class="service-card">
-                <div class="service-icon service-icon--general"></div>
-                <h3>Генеральная</h3>
-                <p>Глубокая уборка всех помещений под ключ, включая
-                   труднодоступные места.</p>
-                <p class="service-price">от 160 ₽/м²</p>
-            </article>
-            <article class="service-card">
-                <div class="service-icon service-icon--renovation"></div>
-                <h3>После ремонта</h3>
-                <p>Удаляем строительную пыль, следы краски и плёнки
-                   после отделочных работ.</p>
-                <p class="service-price">от 210 ₽/м²</p>
-            </article>
+            {% for ct in cleaning_types %}
+                <article class="service-card">
+                    <div class="service-icon service-icon--general"></div>
+                    <h3>{{ ct.name }}</h3>
+                    <p>{{ ct.description|truncatechars:100 }}</p>
+                    <p class="service-price">{{ ct.labor_rate_per_m2|floatformat:"-2" }} чел-ч/м²</p>
+                    <a class="btn btn-primary" href="{% url 'service_detail' ct.pk %}">Подробнее</a>
+                </article>
+            {% empty %}
+                <p class="empty-state">Виды уборки ещё не добавлены в базу.</p>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -62,22 +51,10 @@
     <div class="container">
         <h2>Как мы работаем</h2>
         <ol class="steps-list">
-            <li>
-                <h3>Рассчитайте</h3>
-                <p>Укажите площадь и тип уборки — калькулятор покажет цену и размер бригады.</p>
-            </li>
-            <li>
-                <h3>Выберите дату</h3>
-                <p>Подберём удобное время из свободных слотов бригад.</p>
-            </li>
-            <li>
-                <h3>Дождитесь бригаду</h3>
-                <p>Приедем со своим инвентарём и профессиональным оборудованием.</p>
-            </li>
-            <li>
-                <h3>Примите работу</h3>
-                <p>Проверьте результат и оставьте отзыв — это помогает нам расти.</p>
-            </li>
+            <li><h3>Заявка</h3><p>Выбираете вид уборки и площадь в калькуляторе.</p></li>
+            <li><h3>Расчёт</h3><p>Сайт показывает цену и число клинеров по тарифам.</p></li>
+            <li><h3>Выезд</h3><p>Бригада приезжает со своим инвентарём и средствами.</p></li>
+            <li><h3>Приёмка</h3><p>Оплата после приёмки результата.</p></li>
         </ol>
     </div>
 </section>
@@ -85,12 +62,10 @@
 <section class="calc-promo">
     <div class="container calc-promo-inner">
         <div>
-            <h2>Узнайте стоимость за минуту</h2>
-            <p>Площадь, комнаты и доп. услуги — калькулятор пересчитает
-               цену мгновенно и подберёт бригаду.</p>
+            <h2>Узнайте цену за минуту</h2>
+            <p>Калькулятор считает стоимость по тарифам из базы — без звонков и ожидания.</p>
         </div>
-        <a href="{% url 'calculator' %}" class="btn btn-invert">Открыть калькулятор</a>
+        <a href="{% url 'calculator' %}" class="btn btn-outline">Открыть калькулятор</a>
     </div>
 </section>
-
 {% endblock %}

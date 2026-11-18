@@ -1,10 +1,37 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Контакты — CleanPRO{% endblock %}
 
 {% block content %}
-<section>
-    <h1>Контакты</h1>
-    <p>Страница в разработке.</p>
+<section class="page-head">
+    <div class="container">
+        <h1>Контакты</h1>
+        <p class="section-subtitle">Работаем ежедневно с 8:00 до 22:00.</p>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container about-columns">
+        <div>
+            <h2>Связаться с нами</h2>
+            <ul class="check-list">
+                <li>Телефон: <a href="tel:+78422000000">+7 (8422) 00-00-00</a></li>
+                <li>Ульяновск, ул. Гончарова, 1</li>
+                <li>Почта: hello@cleanpro.ru</li>
+            </ul>
+            <a href="tel:+78422000000" class="btn btn-primary">Позвонить</a>
+        </div>
+        <div>
+            <h2>Форма обратной связи</h2>
+            <form class="calc-form" method="post" action="">
+                {% csrf_token %}
+                <label>Имя<input type="text" name="name" required></label>
+                <label>Телефон<input type="tel" name="phone" required></label>
+                <label>Сообщение<textarea name="message" rows="4" required></textarea></label>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </div>
+    </div>
 </section>
 {% endblock %}

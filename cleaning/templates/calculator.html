@@ -1,10 +1,69 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}Калькулятор — CleanPRO{% endblock %}
+{% block title %}Калькулятор стоимости — CleanPRO{% endblock %}
 
 {% block content %}
-<section>
-    <h1>Калькулятор стоимости</h1>
-    <p>Страница в разработке.</p>
+<section class="page-head">
+    <div class="container">
+        <h1>Калькулятор стоимости</h1>
+        <p class="section-subtitle">Виды уборки и опции берутся из базы, тариф подбирается по площади автоматически.</p>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container">
+        {% if error %}<p class="empty-state">{{ error }}</p>{% endif %}
+
+        <form class="calc-form" method="get" action="{% url 'calculator' %}">
+            <label>
+                Вид уборки
+                <select name="cleaning_type" required>
+                    <option value="" disabled selected>— выберите —</option>
+                    {% for t in types %}
+                        <option value="{{ t.pk }}" {% if chosen_type.pk == t.pk %}selected{% endif %}>{{ t.name }}</option>
+                    {% endfor %}
+                </select>
+            </label>
+
+            <label>
+                Площадь, м²
+                <input type="number" name="area" min="1" max="500" value="{{ chosen_area|default:'' }}" required>
+            </label>
+
+            <fieldset class="calc-options">
+                <legend>Дополнительные опции</legend>
+                {% for opt in options %}
+                    <label class="option-row">
+                        <input type="checkbox" name="options" value="{{ opt.pk }}"
+                            {% if opt in chosen_options %}checked{% endif %}>
+                        <span>{{ opt.name }} — {{ opt.price|floatformat:"-2" }} ₽</span>
+                    </label>
+                {% empty %}
+                    <span class="empty-state">Опции не добавлены в базу.</span>
+                {% endfor %}
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Рассчитать</button>
+        </form>
+
+        {% if result %}
+            <div class="calc-result">
+                <h2>Ваш расчёт</h2>
+                <table class="tariff-table">
+                    <tbody>
+                        <tr><td>Вид уборки</td><td>{{ chosen_type.name }}</td></tr>
+                        <tr><td>Тариф по площади</td><td>{{ chosen_tariff.min_area }}–{{ chosen_tariff.max_area }} м² × {{ chosen_tariff.price_per_m2|floatformat:"-2" }} ₽</td></tr>
+                        <tr><td>Доп. опции</td>
+                            <td>{% for o in chosen_options %}{{ o.name }}{% if not forloop.last %}, {% endif %}{% empty %}—{% endfor %}</td></tr>
+                        <tr><td>Трудоёмкость</td><td>{{ hours|floatformat:"-2" }} чел-ч</td></tr>
+                        <tr><td>Понадобится клинеров</td><td>{{ cleaners }}</td></tr>
+                        <tr class="total-row"><td>Итого</td><td><strong>{{ result|floatformat:"-2" }} ₽</strong></td></tr>
+                    </tbody>
+                </table>
+                <a href="{% url 'contacts' %}" class="btn btn-primary">Оформить заявку</a>
+            </div>
+        {% endif %}
+    </div>
 </section>
 {% endblock %}

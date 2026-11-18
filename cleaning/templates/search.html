@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Поиск — CleanPRO{% endblock %}
+
+{% block content %}
+<section class="services">
+    <div class="container">
+        <h1>Результаты поиска</h1>
+        <p class="section-subtitle">
+            {% if query %}По запросу «{{ query }}»{% else %}Введите запрос в форме поиска{% endif %}
+        </p>
+        <form class="filters" action="{% url 'search' %}" method="get">
+            <input type="search" name="q" value="{{ query }}" placeholder="Что ищем?" aria-label="Поиск">
+            <button type="submit" class="btn btn-primary">Найти</button>
+        </form>
+
+        {% if page_obj.object_list %}
+            <div class="services-grid">
+                {% for ct in page_obj %}
+                    <article class="service-card">
+                        <h3>{{ ct.name }}</h3>
+                        <p>{{ ct.description|truncatechars:80 }}</p>
+                        <a href="{% url 'service_detail' ct.pk %}" class="btn btn-outline-dark">Открыть</a>
+                    </article>
+                {% endfor %}
+            </div>
+
+            {% if page_obj.paginator.num_pages > 1 %}
+                <nav class="pagination">
+                    {% if page_obj.has_previous %}
+                        <a href="?q={{ query }}&page={{ page_obj.previous_page_number }}">← Назад</a>
+                    {% endif %}
+                    <span>Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</span>
+                    {% if page_obj.has_next %}
+                        <a href="?q={{ query }}&page={{ page_obj.next_page_number }}">Вперёд →</a>
+                    {% endif %}
+                </nav>
+            {% endif %}
+        {% elif query %}
+            <p class="empty-state">По запросу «{{ query }}» ничего не найдено.</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

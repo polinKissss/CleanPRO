@@ -4,34 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}CleanPRO — клининг на дому{% endblock %}</title>
+    <title>{% block title %}CleanPRO — клининг в Ульяновске{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-   <header class="site-header">
-    <div class="container">
+
+<header class="site-header">
+    <div class="container header-inner">
         <a href="{% url 'home' %}" class="logo">CleanPRO</a>
-        <nav class="main-nav" aria-label="Основная навигация">
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav">
             <ul>
                 <li><a href="{% url 'home' %}">Главная</a></li>
                 <li><a href="{% url 'services' %}">Услуги</a></li>
                 <li><a href="{% url 'calculator' %}">Калькулятор</a></li>
+                <li><a href="{% url 'about' %}">О компании</a></li>
+                <li><a href="{% url 'profile' %}">Кабинет</a></li>
                 <li><a href="{% url 'contacts' %}">Контакты</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
+<main>
+{% block content %}{% endblock %}
+</main>
 
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-
-   <footer class="site-footer">
+<footer class="site-footer">
     <div class="container">
-        <p>2026 CleanPRO. Клининг, мытьё окон и химчистка мебели на дому.</p>
+        <p>CleanPRO — клининговая компания, Ульяновск. Учебный проект.</p>
     </div>
 </footer>
 
+<script src="{% static 'js/menu.js' %}" defer></script>
 </body>
 </html>

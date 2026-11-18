@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ cleaning_type.name }} — CleanPRO{% endblock %}
+
+{% block content %}
+<section class="service-detail">
+    <div class="container">
+        <a href="{% url 'services' %}" class="back-link">← Все виды уборки</a>
+
+        <div class="detail-layout">
+            <div class="detail-text">
+                <h1>{{ cleaning_type.name }}</h1>
+                <p class="section-subtitle">{{ cleaning_type.description }}</p>
+                <p class="service-price">Норматив трудоёмкости: {{ cleaning_type.labor_rate_per_m2|floatformat:"-2" }} чел-ч/м²</p>
+                <a href="{% url 'calculator' %}" class="btn btn-primary">Рассчитать стоимость</a>
+            </div>
+            <div class="detail-visual">
+                <div class="service-icon service-icon--maintenance big-icon">🧹</div>
+            </div>
+        </div>
+
+        <h2>Тарифы по площади</h2>
+        <table class="tariff-table">
+            <thead>
+                <tr><th>Площадь</th><th>Цена за м²</th></tr>
+            </thead>
+            <tbody>
+                {% for tariff in tariffs %}
+                    <tr>
+                        <td>{{ tariff.min_area }}–{{ tariff.max_area }} м²</td>
+                        <td>{{ tariff.price_per_m2|floatformat:"-2" }} ₽</td>
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="2">Тарифы не заданы</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

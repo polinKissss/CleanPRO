@@ -1,10 +1,49 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}Услуги — CleanPRO{% endblock %}
+{% block title %}Виды уборки — CleanPRO{% endblock %}
 
 {% block content %}
-<section>
-    <h1>Услуги</h1>
-    <p>Страница в разработке.</p>
+<section class="page-head">
+    <div class="container">
+        <h1>Виды уборки</h1>
+        <p class="section-subtitle">Каталог из базы данных{% if query %}. Фильтр: «{{ query }}»{% endif %}</p>
+        <form class="filters" action="{% url 'search' %}" method="get">
+            <input type="search" name="q" value="{{ query }}" placeholder="Найти вид уборки" aria-label="Поиск по видам уборки">
+            <button type="submit" class="btn btn-primary">Найти</button>
+        </form>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container">
+        {% if page_obj.object_list %}
+            <div class="services-grid">
+                {% for ct in page_obj %}
+                    <article class="service-card">
+                        <div class="service-icon service-icon--general"></div>
+                        <h3>{{ ct.name }}</h3>
+                        <p>{{ ct.description|truncatechars:100 }}</p>
+                        <p class="service-price">норматив {{ ct.labor_rate_per_m2|floatformat:"-2" }} чел-ч/м²</p>
+                        <a class="btn btn-primary" href="{% url 'service_detail' ct.pk %}">Подробнее</a>
+                    </article>
+                {% endfor %}
+            </div>
+
+            {% if page_obj.paginator.num_pages > 1 %}
+                <nav class="pagination" aria-label="Страницы каталога">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}{% if query %}&q={{ query }}{% endif %}">← Назад</a>
+                    {% endif %}
+                    <span>Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</span>
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}{% if query %}&q={{ query }}{% endif %}">Вперёд →</a>
+                    {% endif %}
+                </nav>
+            {% endif %}
+        {% else %}
+            <p class="empty-state">Ничего не нашлось{% if query %} по запросу «{{ query }}»{% endif %}.</p>
+        {% endif %}
+    </div>
 </section>
 {% endblock %}
