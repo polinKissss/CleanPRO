@@ -8,20 +8,36 @@
     <div class="container">
         <h1>Виды уборки</h1>
         <p class="section-subtitle">Каталог из базы данных{% if query %}. Фильтр: «{{ query }}»{% endif %}</p>
+
         <form class="filters" action="{% url 'search' %}" method="get">
-            <input type="search" name="q" value="{{ query }}" placeholder="Найти вид уборки" aria-label="Поиск по видам уборки">
+            <input type="search" name="q" value="{{ query }}" id="live-search"
+                   placeholder="Начните вводить — подсказки появятся здесь"
+                   autocomplete="off" aria-label="Поиск по видам уборки">
             <button type="submit" class="btn btn-primary">Найти</button>
+
+            <div class="live-results" id="live-results" hidden>
+                <p class="live-status" id="live-status"></p>
+                <ul id="live-list"></ul>
+            </div>
         </form>
     </div>
 </section>
 
 <section class="services">
     <div class="container">
+
+        <div class="sort-bar">
+            <button type="button" class="btn btn-outline-dark" data-sort="name">По названию</button>
+            <button type="button" class="btn btn-outline-dark" data-sort="labor">По трудоёмкости</button>
+        </div>
+
         {% if page_obj.object_list %}
-            <div class="services-grid">
+            <div class="services-grid" id="services-grid">
                 {% for ct in page_obj %}
-                    <article class="service-card">
-                        <div class="service-icon service-icon--general"></div>
+                    <article class="service-card"
+                             data-name="{{ ct.name }}"
+                             data-labor="{{ ct.labor_rate_per_m2 }}">
+                        <div class="service-icon service-icon--general">🧹</div>
                         <h3>{{ ct.name }}</h3>
                         <p>{{ ct.description|truncatechars:100 }}</p>
                         <p class="service-price">норматив {{ ct.labor_rate_per_m2|floatformat:"-2" }} чел-ч/м²</p>
@@ -33,17 +49,18 @@
             {% if page_obj.paginator.num_pages > 1 %}
                 <nav class="pagination" aria-label="Страницы каталога">
                     {% if page_obj.has_previous %}
-                        <a href="?page={{ page_obj.previous_page_number }}{% if query %}&q={{ query }}{% endif %}">← Назад</a>
+                        <a href="?page={{ page_obj.previous_page_number }}{% if query %}&amp;q={{ query }}{% endif %}">← Назад</a>
                     {% endif %}
                     <span>Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</span>
                     {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}{% if query %}&q={{ query }}{% endif %}">Вперёд →</a>
+                        <a href="?page={{ page_obj.next_page_number }}{% if query %}&amp;q={{ query }}{% endif %}">Вперёд →</a>
                     {% endif %}
                 </nav>
             {% endif %}
         {% else %}
             <p class="empty-state">Ничего не нашлось{% if query %} по запросу «{{ query }}»{% endif %}.</p>
         {% endif %}
+
     </div>
 </section>
 {% endblock %}

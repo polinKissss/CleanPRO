@@ -11,7 +11,14 @@
             <p class="section-subtitle">Заказы клиента {{ orders.0.customer.full_name }} ({{ orders.0.customer.get_role_display }})</p>
             <table class="tariff-table">
                 <thead>
-                    <tr><th>Номер</th><th>Вид уборки</th><th>Дата</th><th>Время</th><th>Статус</th><th>Сумма</th></tr>
+                    <tr>
+                        <th scope="col">Номер</th>
+                        <th scope="col">Вид уборки</th>
+                        <th scope="col">Дата</th>
+                        <th scope="col">Время</th>
+                        <th scope="col">Статус</th>
+                        <th scope="col">Сумма</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {% for order in orders %}

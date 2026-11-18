@@ -3,6 +3,12 @@ from decimal import Decimal
 
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
+from django.http import JsonResponse
+from django.shortcuts import redirect
+
+from .forms import CallbackForm
+
 
 from .models import CleaningType, AdditionalOption, Order
 
@@ -103,3 +109,30 @@ def about(request):
 
 def contacts(request):
     return render(request, 'contacts.html')
+def contacts(request):
+    """Форма заявки: ModelForm, csrf, валидация, сообщения, redirect."""
+    if request.method == 'POST':
+        form = CallbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Заявка отправлена! Перезвоним в течение часа.')
+            return redirect('contacts')  # POST-Redirect-GET: без повторной отправки
+    else:
+        form = CallbackForm()
+    return render(request, 'contacts.html', {'form': form})
+
+
+def api_search(request):
+    """JSON для живого поиска: до 10 совпадений по видам уборки."""
+    query = request.GET.get('q', '').strip()
+    types = CleaningType.objects.none()
+    if query:
+        types = CleaningType.objects.filter(name__icontains=query)[:10]
+    data = [{
+        'pk': t.pk,
+        'name': t.name,
+        'description': (t.description[:80] + '…') if len(t.description) > 80 else t.description,
+        'url': f'/services/{t.pk}/',
+    } for t in types]
+    return JsonResponse({'query': query, 'results': data})
+

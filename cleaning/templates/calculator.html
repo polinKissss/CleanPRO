@@ -13,23 +13,21 @@
 
 <section class="services">
     <div class="container">
-        {% if error %}<p class="empty-state">{{ error }}</p>{% endif %}
+        {% if error %}
+            <p class="empty-state">{{ error }}</p>
+        {% endif %}
 
         <form class="calc-form" method="get" action="{% url 'calculator' %}">
-            <label>
-                Вид уборки
-                <select name="cleaning_type" required>
-                    <option value="" disabled selected>— выберите —</option>
-                    {% for t in types %}
-                        <option value="{{ t.pk }}" {% if chosen_type.pk == t.pk %}selected{% endif %}>{{ t.name }}</option>
-                    {% endfor %}
-                </select>
-            </label>
+            <label for="id-cleaning-type">Вид уборки</label>
+            <select name="cleaning_type" id="id-cleaning-type" required>
+                <option value="" disabled selected>— выберите —</option>
+                {% for t in types %}
+                    <option value="{{ t.pk }}" {% if chosen_type.pk == t.pk %}selected{% endif %}>{{ t.name }}</option>
+                {% endfor %}
+            </select>
 
-            <label>
-                Площадь, м²
-                <input type="number" name="area" min="1" max="500" value="{{ chosen_area|default:'' }}" required>
-            </label>
+            <label for="id-area">Площадь, м²</label>
+            <input type="number" name="area" id="id-area" min="1" max="500" value="{{ chosen_area|default:'' }}" required>
 
             <fieldset class="calc-options">
                 <legend>Дополнительные опции</legend>
@@ -40,7 +38,7 @@
                         <span>{{ opt.name }} — {{ opt.price|floatformat:"-2" }} ₽</span>
                     </label>
                 {% empty %}
-                    <span class="empty-state">Опции не добавлены в базу.</span>
+                    <p class="empty-state">Опции не добавлены в базу.</p>
                 {% endfor %}
             </fieldset>
 
@@ -52,13 +50,32 @@
                 <h2>Ваш расчёт</h2>
                 <table class="tariff-table">
                     <tbody>
-                        <tr><td>Вид уборки</td><td>{{ chosen_type.name }}</td></tr>
-                        <tr><td>Тариф по площади</td><td>{{ chosen_tariff.min_area }}–{{ chosen_tariff.max_area }} м² × {{ chosen_tariff.price_per_m2|floatformat:"-2" }} ₽</td></tr>
-                        <tr><td>Доп. опции</td>
-                            <td>{% for o in chosen_options %}{{ o.name }}{% if not forloop.last %}, {% endif %}{% empty %}—{% endfor %}</td></tr>
-                        <tr><td>Трудоёмкость</td><td>{{ hours|floatformat:"-2" }} чел-ч</td></tr>
-                        <tr><td>Понадобится клинеров</td><td>{{ cleaners }}</td></tr>
-                        <tr class="total-row"><td>Итого</td><td><strong>{{ result|floatformat:"-2" }} ₽</strong></td></tr>
+                        <tr>
+                            <td>Вид уборки</td>
+                            <td>{{ chosen_type.name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Тариф по площади</td>
+                            <td>{{ chosen_tariff.min_area }}–{{ chosen_tariff.max_area }} м² × {{ chosen_tariff.price_per_m2|floatformat:"-2" }} ₽</td>
+                        </tr>
+                        <tr>
+                            <td>Доп. опции</td>
+                            <td>
+                                {% for o in chosen_options %}{{ o.name }}{% if not forloop.last %}, {% endif %}{% empty %}—{% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Трудоёмкость</td>
+                            <td>{{ hours|floatformat:"-2" }} чел-ч</td>
+                        </tr>
+                        <tr>
+                            <td>Понадобится клинеров</td>
+                            <td>{{ cleaners }}</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>Итого</td>
+                            <td><strong>{{ result|floatformat:"-2" }} ₽</strong></td>
+                        </tr>
                     </tbody>
                 </table>
                 <a href="{% url 'contacts' %}" class="btn btn-primary">Оформить заявку</a>

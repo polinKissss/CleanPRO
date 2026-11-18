@@ -20,15 +20,32 @@
                 <li>Ульяновск, ул. Гончарова, 1</li>
                 <li>Почта: hello@cleanpro.ru</li>
             </ul>
-            <a href="tel:+78422000000" class="btn btn-primary">Позвонить</a>
         </div>
         <div>
-            <h2>Форма обратной связи</h2>
-            <form class="calc-form" method="post" action="">
+            <h2>Оставить заявку</h2>
+            <form class="calc-form" method="post" action="{% url 'contacts' %}" id="callback-form" novalidate>
                 {% csrf_token %}
-                <label>Имя<input type="text" name="name" required></label>
-                <label>Телефон<input type="tel" name="phone" required></label>
-                <label>Сообщение<textarea name="message" rows="4" required></textarea></label>
+
+                <label for="id_name">Имя</label>
+                {{ form.name }}
+                {% for e in form.name.errors %}<span class="field-error server">{{ e }}</span>{% endfor %}
+                <span class="field-error" data-error-for="name"></span>
+
+                <label for="id_phone">Телефон</label>
+                {{ form.phone }}
+                {% for e in form.phone.errors %}<span class="field-error server">{{ e }}</span>{% endfor %}
+                <span class="field-error" data-error-for="phone"></span>
+
+                <label for="id_email">Почта (необязательно)</label>
+                {{ form.email }}
+                {% for e in form.email.errors %}<span class="field-error server">{{ e }}</span>{% endfor %}
+                <span class="field-error" data-error-for="email"></span>
+
+                <label for="id_message">Сообщение</label>
+                {{ form.message }}
+                {% for e in form.message.errors %}<span class="field-error server">{{ e }}</span>{% endfor %}
+                <span class="field-error" data-error-for="message"></span>
+
                 <button type="submit" class="btn btn-primary">Отправить</button>
             </form>
         </div>

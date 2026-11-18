@@ -15,14 +15,22 @@
                 <a href="{% url 'services' %}" class="btn btn-outline">Все услуги</a>
             </div>
             <dl class="hero-stats">
-                <div><dt>60 мин</dt><dd>средний выезд</dd></div>
-                <div><dt>1–4</dt><dd>клинера в бригаде</dd></div>
-                <div><dt>6</dt><dd>видов уборки</dd></div>
+                <div>
+                    <dt>60 мин</dt>
+                    <dd>средний выезд</dd>
+                </div>
+                <div>
+                    <dt>1–4</dt>
+                    <dd>клинера в бригаде</dd>
+                </div>
+                <div>
+                    <dt>6</dt>
+                    <dd>видов уборки</dd>
+                </div>
             </dl>
         </div>
         <div class="hero-visual">
-            
-                <img src="{% static 'img/2.jpg' %}" alt="Уборка квартиры" width="600" height="450"> 
+            <img src="{% static 'img/2.jpg' %}" alt="Уборка квартиры" width="600" height="450">
         </div>
     </div>
 </section>
@@ -34,7 +42,7 @@
         <div class="services-grid">
             {% for ct in cleaning_types %}
                 <article class="service-card">
-                    <div class="service-icon service-icon--general"></div>
+                    <div class="service-icon service-icon--general">🧹</div>
                     <h3>{{ ct.name }}</h3>
                     <p>{{ ct.description|truncatechars:100 }}</p>
                     <p class="service-price">{{ ct.labor_rate_per_m2|floatformat:"-2" }} чел-ч/м²</p>
@@ -51,10 +59,22 @@
     <div class="container">
         <h2>Как мы работаем</h2>
         <ol class="steps-list">
-            <li><h3>Заявка</h3><p>Выбираете вид уборки и площадь в калькуляторе.</p></li>
-            <li><h3>Расчёт</h3><p>Сайт показывает цену и число клинеров по тарифам.</p></li>
-            <li><h3>Выезд</h3><p>Бригада приезжает со своим инвентарём и средствами.</p></li>
-            <li><h3>Приёмка</h3><p>Оплата после приёмки результата.</p></li>
+            <li>
+                <h3>Заявка</h3>
+                <p>Выбираете вид уборки и площадь в калькуляторе.</p>
+            </li>
+            <li>
+                <h3>Расчёт</h3>
+                <p>Сайт показывает цену и число клинеров по тарифам.</p>
+            </li>
+            <li>
+                <h3>Выезд</h3>
+                <p>Бригада приезжает со своим инвентарём и средствами.</p>
+            </li>
+            <li>
+                <h3>Приёмка</h3>
+                <p>Оплата после приёмки результата.</p>
+            </li>
         </ol>
     </div>
 </section>

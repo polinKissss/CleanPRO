@@ -208,3 +208,17 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Отзыв на {self.order.number} ({self.rating}/5)"
+class CallbackRequest(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Имя")
+    phone = models.CharField(max_length=20, verbose_name="Телефон")
+    email = models.EmailField(blank=True, verbose_name="Почта")
+    message = models.TextField(verbose_name="Сообщение")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Создана")
+
+    class Meta:
+        verbose_name = "Заявка"
+        verbose_name_plural = "Заявки"
+        ordering = ["-created_at"]
+
+    def __str__(self):
+        return f"{self.name} ({self.phone})"

@@ -10,8 +10,10 @@
         <p class="section-subtitle">
             {% if query %}По запросу «{{ query }}»{% else %}Введите запрос в форме поиска{% endif %}
         </p>
+
         <form class="filters" action="{% url 'search' %}" method="get">
-            <input type="search" name="q" value="{{ query }}" placeholder="Что ищем?" aria-label="Поиск">
+            <input type="search" name="q" value="{{ query }}"
+                   placeholder="Что ищем?" aria-label="Поиск по видам уборки">
             <button type="submit" class="btn btn-primary">Найти</button>
         </form>
 
@@ -27,13 +29,13 @@
             </div>
 
             {% if page_obj.paginator.num_pages > 1 %}
-                <nav class="pagination">
+                <nav class="pagination" aria-label="Страницы результатов">
                     {% if page_obj.has_previous %}
-                        <a href="?q={{ query }}&page={{ page_obj.previous_page_number }}">← Назад</a>
+                        <a href="?q={{ query|urlencode }}&amp;page={{ page_obj.previous_page_number }}">← Назад</a>
                     {% endif %}
                     <span>Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</span>
                     {% if page_obj.has_next %}
-                        <a href="?q={{ query }}&page={{ page_obj.next_page_number }}">Вперёд →</a>
+                        <a href="?q={{ query|urlencode }}&amp;page={{ page_obj.next_page_number }}">Вперёд →</a>
                     {% endif %}
                 </nav>
             {% endif %}
