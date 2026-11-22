@@ -86,8 +86,6 @@ def calculator(request):
     hours = (ct.labor_rate_per_m2 * area) / 8
     cleaners = max(1, min(4, math.ceil(hours / 6)))
 
-    cleaners = max(1, min(4, math.ceil(hours / 6)))
-
     if hours > 24:
         logger.warning('Ручной подбор: трудоёмкость=%s ч превышает 24 ч', hours)
 
