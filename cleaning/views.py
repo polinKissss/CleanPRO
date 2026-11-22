@@ -6,6 +6,8 @@ from django.http import JsonResponse
 from django.shortcuts import redirect, render
 from .models import User, Order
 import math
+from .models import CleaningType, Tariff, AdditionalOption
+
 
 
 from .forms import CallbackForm
@@ -61,12 +63,15 @@ def calculator(request):
 
     logger.info('Начало расчёта: вид=%s, площадь=%s', ct_id, area)
 
+    options = AdditionalOption.objects.all()
+
     context = {
         'types': CleaningType.objects.all(),
-        'options': [],
+        'options': options,
         'chosen_options': [],
         'chosen_area': area_raw,
     }
+
 
     if not ct:
         context['error'] = 'Выберите вид уборки.'
@@ -85,12 +90,18 @@ def calculator(request):
     base_price = tariff.price_per_m2 * area
     hours = (ct.labor_rate_per_m2 * area) / 8
     cleaners = max(1, min(4, math.ceil(hours / 6)))
+    option_ids = [int(x) for x in request.GET.getlist('options') if x.isdigit()]
+    chosen_options = AdditionalOption.objects.filter(id__in=option_ids)
+    options_total = sum(op.price for op in chosen_options)
+    total = base_price + options_total
+
 
     if hours > 24:
         logger.warning('Ручной подбор: трудоёмкость=%s ч превышает 24 ч', hours)
 
 
-    logger.info('Расчёт завершён: итого=%s, клинеров=%d', base_price, cleaners)
+    logger.info('Расчёт завершён: итого=%s (опции=%s), клинеров=%d', total, options_total, cleaners)
+
 
 
     context.update({
@@ -99,6 +110,8 @@ def calculator(request):
         'hours': hours,
         'cleaners': cleaners,
         'result': base_price,
+        'chosen_options': chosen_options,
+        'total': total,
     })
     return render(request, 'calculator.html', context)
 
