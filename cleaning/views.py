@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 from django.shortcuts import redirect, render
+from .models import User, Order
 
 from .forms import CallbackForm
 from .models import CleaningType, Order, Tariff
@@ -79,6 +80,9 @@ def calculator(request):
         context['error'] = 'Для такой площади пока нет тарифа.'
         return render(request, 'calculator.html', context)
 
+    print(f"DEBUG: вид={ct.id}, площадь={area}")
+    print(f"DEBUG: тариф={tariff.min_area}–{tariff.max_area}, цена за м²={tariff.price_per_m2}")
+
     base_price = tariff.price_per_m2 * area
     hours = (ct.labor_rate_per_m2 * area) / 8
     cleaners = max(1, int(hours))
@@ -95,15 +99,16 @@ def calculator(request):
     return render(request, 'calculator.html', context)
 
 
+
+
 def profile(request):
-    if request.user.is_authenticated:
-        orders = (Order.objects
-                  .select_related('cleaning_type')
-                  .filter(customer=request.user)
-                  .order_by('-date'))
-    else:
-        orders = Order.objects.none()
-    return render(request, 'profile.html', {'orders': orders})
+    context = {}
+    # находим пользователя проекта по логину Django (логин = телефон)
+    customer = User.objects.filter(phone=request.user.username).first()
+    orders = Order.objects.filter(customer=customer).order_by('-date') if customer else []
+    context['orders'] = orders
+    return render(request, 'profile.html', context)
+
 
 
 
