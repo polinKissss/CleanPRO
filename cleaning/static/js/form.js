@@ -24,11 +24,13 @@ if (form) {
         return true;
     }
 
-    form.querySelectorAll('input, textarea').forEach(input => {
+       form.querySelectorAll('input, textarea').forEach(input => {
         input.addEventListener('blur', () => validateField(input));
     });
 
+
     form.addEventListener('submit', (e) => {
+         return;
         let ok = true;
         form.querySelectorAll('input, textarea').forEach(input => {
             if (!validateField(input)) ok = false;
