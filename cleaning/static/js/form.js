@@ -30,7 +30,6 @@ if (form) {
 
 
     form.addEventListener('submit', (e) => {
-         return;
         let ok = true;
         form.querySelectorAll('input, textarea').forEach(input => {
             if (!validateField(input)) ok = false;
