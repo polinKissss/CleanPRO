@@ -80,14 +80,12 @@ def calculator(request):
         context['error'] = 'Для такой площади пока нет тарифа.'
         return render(request, 'calculator.html', context)
 
-    print(f"DEBUG: вид={ct.id}, площадь={area}")
-    print(f"DEBUG: тариф={tariff.min_area}–{tariff.max_area}, цена за м²={tariff.price_per_m2}")
-
     base_price = tariff.price_per_m2 * area
     hours = (ct.labor_rate_per_m2 * area) / 8
     cleaners = max(1, int(hours))
 
     logger.info('Расчёт завершён: итого=%s, клинеров=%d', base_price, cleaners)
+
 
     context.update({
         'chosen_type': ct,
