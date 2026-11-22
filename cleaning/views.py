@@ -5,6 +5,8 @@ from django.core.paginator import Paginator
 from django.http import JsonResponse
 from django.shortcuts import redirect, render
 from .models import User, Order
+import math
+
 
 from .forms import CallbackForm
 from .models import CleaningType, Order, Tariff
@@ -79,10 +81,18 @@ def calculator(request):
         logger.warning('Тариф не найден: вид=%s, площадь=%s', ct_id, area)
         context['error'] = 'Для такой площади пока нет тарифа.'
         return render(request, 'calculator.html', context)
-
+    
     base_price = tariff.price_per_m2 * area
     hours = (ct.labor_rate_per_m2 * area) / 8
-    cleaners = max(1, int(hours))
+    cleaners = max(1, min(4, math.ceil(hours / 6)))
+
+    cleaners = max(1, min(4, math.ceil(hours / 6)))
+
+    if hours > 24:
+        logger.warning('Ручной подбор: трудоёмкость=%s ч превышает 24 ч', hours)
+
+
+    print(f"DEBUG: hours={hours}, cleaners={cleaners}")
 
     logger.info('Расчёт завершён: итого=%s, клинеров=%d', base_price, cleaners)
 
