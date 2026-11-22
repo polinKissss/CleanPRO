@@ -90,8 +90,6 @@ def calculator(request):
         logger.warning('Ручной подбор: трудоёмкость=%s ч превышает 24 ч', hours)
 
 
-    print(f"DEBUG: hours={hours}, cleaners={cleaners}")
-
     logger.info('Расчёт завершён: итого=%s, клинеров=%d', base_price, cleaners)
 
 
